@@ -13,11 +13,8 @@ export default function I18nHotReload(config: I18nHotReloadConfig): PluginOption
 	return {
 		name: 'i18n-hot-reload',
 		enforce: 'post',
-		// HMR
 		handleHotUpdate({ file, server }) {
 			if ( file.includes(config.folder) ) {
-				console.log('Reloading json file...');
-		
 				server.ws.send({
 					type: 'full-reload',
 
