@@ -1,0 +1,41 @@
+{
+	"name": "vite-plugin-i18n-hot-reload",
+	"version": "0.0.2",
+	"description": "I18n hot reload plugin for vite.",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+		"require": "./dist/index.js",
+		"import": "./dist/index.mjs",
+		"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "tsup src/index.ts --format cjs,esm --dts --clean",
+		"watch": "npm run build -- --watch src",
+		"prepublishOnly": "npm run build"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.23",
+		"tsup": "^5.12.4",
+		"typescript": "^4.6.3",
+		"vite": "^2.9.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jdaoliveiraprograming/vite-plugin-i18n-hot-reload.git"
+	},
+	"keywords": [
+		"vite-plugin",
+		"i18n",
+		"hot-reload"
+	],
+	"author": "José Silva Oliveira",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/jdaoliveiraprograming/vite-plugin-i18n-hot-reload/issues"
+	},
+	"homepage": "https://github.com/jdaoliveiraprograming/vite-plugin-i18n-hot-reload#readme"
+}
